@@ -1,0 +1,33 @@
+{
+  "name": "codeflow-website",
+  "version": "1.0.0",
+  "description": "CodeFlow Official Website - Learn. Code. Build.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:client": "vite",
+    "dev:worker": "wrangler dev",
+    "build": "vite build",
+    "test": "vitest run",
+    "db:migrate:remote": "wrangler d1 migrations apply codeflow-db --remote",
+    "db:seed:remote": "wrangler d1 execute codeflow-db --remote --file=src/db/seed/seed.sql",
+    "deploy": "npm run build && wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240909.0",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.6",
+    "vite-plugin-pwa": "^0.20.5",
+    "vitest": "^2.1.1",
+    "wrangler": "^3.78.10"
+  }
+}

@@ -1,0 +1,67 @@
+/* CodeFlow Design Tokens — Phase 2 */
+:root {
+  /* Color */
+  --bg: #12172b;
+  --bg-elevated: #161c33;
+  --surface: #1b2138;
+  --surface-hover: #212842;
+  --border: #2c3452;
+  --border-strong: #3a4368;
+
+  --text: #e7eaf3;
+  --text-muted: #8891ac;
+  --text-faint: #5d6584;
+
+  --accent-amber: #e8a33d;
+  --accent-amber-dim: #b9812e;
+  --accent-teal: #4fd1c5;
+  --accent-teal-dim: #3aa89e;
+
+  --danger: #e5686b;
+  --success: #4fd1c5;
+
+  /* Type */
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+
+  /* Spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Radius — small and consistent, not a rounded-card default */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+
+  --max-content-width: 1120px;
+  --line-length: 68ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

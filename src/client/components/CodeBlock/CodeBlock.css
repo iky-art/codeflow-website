@@ -1,0 +1,38 @@
+.code-block {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: var(--text-xs);
+}
+
+.code-block-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.code-block-body {
+  margin: 0;
+  padding: var(--space-4);
+  overflow-x: auto;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.code-block-body .tok-keyword { color: var(--accent-amber); }
+.code-block-body .tok-string { color: var(--accent-teal); }
+.code-block-body .tok-comment { color: var(--text-faint); font-style: italic; }
+.code-block-body .tok-func { color: #a3b8ff; }

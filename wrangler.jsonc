@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "codeflow-website",
+  "main": "src/server/index.ts",
+  "compatibility_date": "2024-09-01",
+  "pages_build_output_dir": "dist",
+
+  "vars": {
+    "PUBLIC_APP_URL": "https://codeflow.pages.dev"
+  },
+
+  // D1 binding — database_id diisi setelah kamu jalankan:
+  //   wrangler d1 create codeflow-db
+  // Jangan mengarang database_id, isi manual setelah database dibuat.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "codeflow-db",
+      "database_id": "5a42eb51-e27c-4061-992c-148c5621e9ff",
+      "migrations_dir": "src/db/migrations"
+    }
+  ]
+
+  // R2 dan KV sengaja belum ditambahkan di sini — akan diaktifkan
+  // hanya kalau ada fitur yang benar-benar membutuhkannya (sesuai brief).
+}
